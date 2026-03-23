@@ -12,21 +12,3 @@
   font-family: 'InterTight-Regular';
   src: url('../fonts/InterTight-Regular.ttf');
 } */
-
-h1 {
-  font-size: 56px;
-  font-family: 'GeistMono-Regular';
-}
-
-h2 {
-  font-size: 28px;
-  font-family: 'GeistMono-Regular';
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 16px;
-}

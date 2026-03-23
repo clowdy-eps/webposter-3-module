@@ -1,21 +1,543 @@
 * {
   box-sizing: border-box;
+  font-family: 'GeistMono-Regular';
 }
 
 body {
-  margin-top: 40px;
+  align-items: center;
+  background-color: #efefef;
 }
 
-.header {
-  margin-left: 40px;
+h1 {
+  font-size: 5vw;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 16px;
+}
+
+.background {
+  position: absolute;
+  margin-top: 0;
+  opacity: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* ХЕДЕР */
+header {
+  width: 100%;
+  min-width: 100vw;
+  padding: 3.125vw 3.2vw;
+  padding-bottom: 1.875vw;
   display: flex;
-  position: relative;
+  position: fixed;
   flex-direction: row;
-  gap: 10%;
-  padding-bottom: 2vh;
+  gap: 7%;
+  border-bottom: 1px solid #000;
+  margin-bottom: 3.125vw;
+  background-color: #efefef;
+  z-index: 3;
+}
+
+header p {
+  font-size: 2vw;
+}
+
+.header-link {
+  font-size: 2vw;
+  border: 1px solid #000;
+  padding: 0.625vw 3vw;
+  background-color: #fff;
 }
 
 .header-link:hover {
-  color: #67dc15;
+  border-color: #ff6400;
+  color: #ff6400;
   cursor: pointer;
+}
+.header-link:active {
+  background-color: #ffdfcb;
+}
+
+.main-wrapper {
+  padding-top: 11.875vw;
+  display: flex;
+  width: 100%;
+  min-width: 100vw;
+}
+
+/* БОКОВОЕ МЕНЮ */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  /* position: fixed; */
+  position: sticky;
+  top: 11.875vw; /* ДОБАВЛЕНА ЭТА СТРОКА: расстояние от верхнего края экрана */
+  height: auto;
+  align-self: flex-start;
+  width: 25vw;
+  border-left: 1px solid #000;
+}
+
+.sidebar-block {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background-color: #efefef;
+  padding: 1.25vw 2vw;
+  font-size: 2vw;
+}
+
+.instruments {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25vw;
+  background-color: #fff;
+}
+
+.pencil,
+.comparison,
+.glass,
+.scan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pencil,
+.comparison {
+  gap: 0.625vw;
+}
+
+.pencil-img,
+.comparison-img,
+.glass-img,
+.scan-img {
+  height: 4.375vw;
+  width: 8vw;
+}
+
+.pencil {
+  padding: 1.25vw 2vw;
+}
+.comparison {
+  border-left: 1px solid #000;
+  padding: 1.25vw 2vw;
+}
+.glass {
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  padding: 1.25vw 2vw;
+}
+.scan {
+  border-top: 1px solid #000;
+  padding: 1.25vw 2vw;
+}
+
+/* ЗАДАЧИ */
+.tasks {
+  padding: 1.25vw 2vw;
+  display: flex;
+  flex-direction: column;
+  font-size: 2vw;
+  gap: 0.625vw;
+  background-color: #fff;
+}
+
+.task-check {
+  border-radius: 0%;
+}
+
+/* ПРОГРЕСС-БАР */
+
+.progressBarSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progressBar {
+  margin-top: 1vw;
+  background: #fff;
+  width: 86vw;
+  height: 4vw;
+  position: relative;
+  border: 1px solid #000;
+}
+.progressBarLine {
+  background: #c0ff95;
+  height: 100%;
+  opacity: 0;
+}
+.progressBarNumber {
+  position: absolute;
+  font-size: 1.6vw;
+  top: 1.2vw;
+  right: 2vw;
+}
+
+/* MAIN - СЕКЦИЯ 1 */
+.section-1 {
+  width: 75vw;
+  height: 53.125vw;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.border-1 {
+  background-color: #efefef;
+  border-top: 1px solid #000;
+}
+
+.heading-1 {
+  padding: 6.875vw 0 0 3.2vw;
+  margin-bottom: 2.5vw;
+}
+
+.wrapper-1 {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper-2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.coordinates {
+  width: 20vw;
+  padding: 1.56vw 0 4.06vw 3.2vw;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  font-size: 2vw;
+  background-color: #fff;
+}
+
+.cursor {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 5;
+  animation: cursor 5s infinite;
+  mix-blend-mode: difference;
+}
+
+.growth {
+  width: 20vw;
+  padding: 1.56vw 0 1.56vw 3.2vw;
+  border-top: 1px solid #000;
+  border-right: 1px solid #463030;
+  border-bottom: 1px solid #000;
+  font-size: 2vw;
+}
+
+.sprite-graphics {
+  height: 14.375vw;
+  width: 20vw;
+  background: url(../images/section-1/graphics.svg) 0px 0px;
+  background-color: #fff;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.dragonfly {
+  position: relative;
+  border-top: 1px solid #000;
+  width: 100%;
+  height: 40vw;
+  background-color: #fff;
+}
+
+.dragonfly img:nth-of-type(2) {
+  position: absolute;
+  margin: 3.75vw 19vw;
+}
+.dragonfly img:nth-of-type(3) {
+  position: absolute;
+  margin: 27.5vw 7vw;
+}
+.dragonfly img:nth-of-type(4) {
+  position: absolute;
+  margin: 14.375vw 40vw;
+}
+
+.dragonfly-img {
+  position: absolute;
+  height: 40.18vw;
+  width: 48vw;
+  padding: 4.375vw 0 0 2vw;
+  z-index: 1;
+}
+
+#txt-1 {
+  position: absolute;
+  margin: 1.875vw 0 0 22vw;
+  z-index: 2;
+  font-size: 24px;
+}
+#txt-2 {
+  position: absolute;
+  margin: 25.625vw 0 0 12vw;
+  z-index: 2;
+  font-size: 24px;
+}
+#txt-3 {
+  position: absolute;
+  margin: 12.5vw 0 0 44vw;
+  z-index: 2;
+  font-size: 24px;
+}
+#txt-4 {
+  position: absolute;
+  margin: 36.25vw 0 0 4vw;
+  z-index: 2;
+  font-size: 24px;
+}
+#txt-5 {
+  position: absolute;
+  margin: 36.25vw 0 0 34vw;
+  z-index: 2;
+  font-size: 24px;
+}
+
+/* СЕКЦИЯ 2 */
+.heading-2 {
+  padding: 8.75vw 0 0 3.2vw;
+  margin-bottom: 1.875vw;
+}
+
+.block-1 {
+  border-bottom: 1px solid #000;
+}
+
+.section-2 {
+  width: 75vw;
+  height: 65.625vw;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.block-2 {
+  display: flex;
+  flex-direction: row;
+  height: 12vw;
+}
+.block-2 p {
+  margin-top: 0.5vw;
+}
+
+.quantity,
+.risk {
+  margin: 1.25vw 2.5vw 2vw 3.2vw;
+  padding: 1vw 1vw 2vw 2vw;
+  position: relative;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+.quantity p,
+.risk p {
+  font-size: 2.4vw;
+}
+
+/* .quantity {
+  width: 36vw;
+}
+.risk {
+  width: 30vw;
+} */
+
+.button-1 {
+  background-color: #c0ff95;
+  padding: 0.625vw 2vw;
+  margin-top: 1.25vw;
+}
+
+.button-2 {
+  background-color: #c0ff95;
+  padding: 0.625vw 2vw;
+  z-index: 2;
+}
+
+.plant {
+  position: relative;
+  margin-left: 3.2vw;
+  padding: 1.25vw 2vw;
+  width: 27vw;
+  height: 36.25vw;
+  background-color: #fff;
+  font-size: 28px;
+  border: 1px solid #000;
+}
+.plant-img {
+  width: 70%;
+  padding-left: 3vw;
+}
+
+.plant p {
+  width: 100%;
+}
+
+.console {
+  position: relative;
+  margin-left: 2vw;
+  background-color: #2a2a2a;
+  width: 40vw;
+  height: 26.25vw;
+}
+
+.console-name {
+  position: absolute;
+  background-color: #5d5d5d;
+  width: 40vw;
+  height: 3.2vw;
+  z-index: 1;
+}
+.console-name p {
+  position: relative;
+  color: #fff;
+  margin: 0.8vw;
+  font-size: 28px;
+}
+
+.console img:nth-of-type(1) {
+  position: absolute;
+  margin: 4.375vw 10vw;
+}
+.console img:nth-of-type(2) {
+  position: absolute;
+  margin: 5vw 8vw;
+}
+.console img:nth-of-type(3) {
+  position: absolute;
+  margin: 5vw 20vw;
+}
+.console img:nth-of-type(4) {
+  position: absolute;
+  margin: 6.25vw 2vw;
+}
+.console img:nth-of-type(5) {
+  position: absolute;
+  margin: 17.5vw 5vw;
+}
+.console img:nth-of-type(6) {
+  position: absolute;
+  margin: 14.375vw 19vw;
+}
+.console img:nth-of-type(7) {
+  position: absolute;
+  margin: 11.875vw 3vw;
+}
+.console img:nth-of-type(8) {
+  position: absolute;
+  margin: 10vw 9vw;
+}
+.console img:nth-of-type(9) {
+  position: absolute;
+  margin: 18.125vw 6vw;
+}
+
+/* СЕКЦИЯ 3 */
+
+.section-3 {
+  width: 75vw;
+  height: 62.5vw;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.map {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 100%;
+  margin-left: 3.2vw;
+  padding: 1vw;
+  border: 1px solid #000;
+  width: 61vw;
+  height: 45vw;
+  background-color: #fff;
+}
+
+.map img:nth-of-type(1) {
+  width: 90%;
+}
+
+.section-3 {
+  width: 75vw;
+  height: auto; /* Было 62.5vw, делаем резиновым, чтобы карта не вываливалась */
+  min-height: 62.5vw;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding-bottom: 4vw; /* Воздух снизу */
+}
+
+.map {
+  position: relative;
+  margin-left: 3.2vw;
+  padding: 3vw; /* Создаем аккуратную рамку вокруг карты */
+  border: 1px solid #000;
+  width: 61vw;
+  height: auto; /* МАГИЯ ТУТ: контейнер сам подстроится под высоту картинки */
+  background-color: #fff;
+}
+
+.map img:nth-of-type(1) {
+  position: relative; /* Возвращаем карту в нормальный поток */
+  width: 100%; /* Картинка заполнит контейнер с учетом padding, центрировать через flexbox больше не нужно! */
+  height: auto;
+  display: block;
+  z-index: 0;
+}
+
+.map img:nth-of-type(2) {
+  position: absolute;
+  top: 10vw;
+  left: 10vw;
+
+  /* margin: 9.375vw 0 0 11vw; */
+}
+.map img:nth-of-type(3) {
+  position: absolute;
+  top: 10vw;
+  left: 10vw; /* margin: 21.875vw 0 10vw; */
+}
+.map img:nth-of-type(4) {
+  position: absolute;
+  top: 10vw;
+  left: 10vw; /* padding: 12.5vw 0 30vw; */
+}
+.map img:nth-of-type(5) {
+  position: absolute;
+  top: 10vw;
+  left: 10vw; /* padding: 12.5vw 0 0 4vw; */
+}
+.map img:nth-of-type(6) {
+  position: absolute;
+  top: 10vw;
+  left: 10vw; /* padding: 3.125vw 0 0 5vw; */
+}
+.map img:nth-of-type(7) {
+  position: absolute;
+  top: 10vw;
+  left: 10vw; /* padding: 1.25vw 0 0 2vw; */
+}
+.map img:nth-of-type(8) {
+  position: absolute;
+  top: 10vw;
+  left: 10vw; /* padding: 1.25vw 2vw; */
+}
+
+/* ФУТЕР */
+footer {
+  font-size: 28px;
+  padding: 3.4vw 3.2vw;
+  line-height: 1.875vw;
 }

@@ -7,24 +7,185 @@
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script defer src="javascripts/scripts.js"></script>
   </head>
+  <!-- <img class="background" src="images/background.png" alt="" /> -->
+  <body>
+    <!-- ХЕДЕР -->
+    <header>
+      <p>ИССЛЕДОВАТЕЛЬСКИЙ<br />ХАБ МИКРОПАРКА</p>
+      <button class="header-link">Измерения</button>
+      <button class="header-link">Мутации</button>
+      <button class="header-link">Карта посадок</button>
+    </header>
 
-  <div class="header">
-    <h2>ИССЛЕДОВАТЕЛЬСКИЙ<br />ХАБ МИКРОПАРКА</h2>
-    <h2 class="header-link">Измерения</h2>
-    <h2 class="header-link">Мутации</h2>
-    <h2 class="header-link">Карта посадок</h2>
-  </div>
+    <div class="main-wrapper">
+      <!-- ОСНОВНАЯ ЧАСТЬ -->
+      <main>
+        <section class="section-1">
+          <div class="border-1"></div>
+          <div class="heading-1">
+            <div class="typewriter-1">
+              <h1>ПРОВЕДИ АНАЛИЗ НАСЕКОМОГО</h1>
+            </div>
+          </div>
+          <div class="wrapper-2">
+            <div class="wrapper-1">
+              <div class="coordinates">
+                <p>
+                  КООРДИНАТЫ<br />
+                  ИНСТРУМЕНТА:<br />____
+                </p>
+              </div>
+              <div class="growth"><p>ГРАФИК РОСТА</p></div>
+              <div class="sprite-graphics"></div>
+            </div>
+            <div class="dragonfly">
+              <img class="dragonfly-img" src=".//images/dragonfly.svg" alt="" />
+              <img src=".//images/section-1/arrow.svg" alt="" />
+              <img src=".//images/section-1/arrow-2.svg" alt="" />
+              <img src=".//images/section-1/arrow-3.svg" alt="" />
+              <p id="txt-1">30M</p>
+              <p id="txt-2">30M</p>
+              <p id="txt-3">30M</p>
+              <p id="txt-4">ОБЪЕКТ №789</p>
+              <p id="txt-5">11M</p>
+            </div>
+          </div>
+        </section>
 
-  <hr />
-  <hr />
+        <!-- СЕКЦИЯ 2 -->
+        <section class="section-2">
+          <div class="block-1">
+            <div class="heading-2">
+              <div class="typewriter-2">
+                <h1>ВЫЯВИ МУТАЦИЮ РАСТЕНИЯ</h1>
+              </div>
+            </div>
+          </div>
 
-  <section class="section-1"></section>
-  <div></div>
-  <h1>ПРОВЕДИ АНАЛИЗ НАСЕКОМОГО</h1>
-  <hr />
-  <h2>КООРДИНАТЫ ИНСТРУМЕНТА:</h2>
-  <aside class="sidebar">
-    <li>ИНСТРУМЕНТЫ</li>
-    <li>ЗАДАЧИ</li>
-  </aside>
+          <div class="block-2">
+            <div class="quantity">
+              <p>МУТАЦИЙ ОБНАРУЖЕНО: __</p>
+              <button class="button-1">ТЕСТ</button>
+            </div>
+            <div class="risk">
+              <p>РИСК МУТАЦИИ: __%</p>
+              <button class="button-1">РАССЧИТАТЬ</button>
+            </div>
+          </div>
+          <div class="wrapper-2">
+            <div class="plant">
+              <img
+                class="plant-img"
+                src=".//images/section-2/plant.svg"
+                alt="растение"
+              />
+              <p>ОБЪЕКТ №908</p>
+            </div>
+
+            <div class="console">
+              <div class="console-name"><p>КОНСОЛЬ</p></div>
+              <img src=".//images/section-2/danger.svg" alt="" />
+              <img src=".//images/section-2/danger.svg" alt="" />
+              <img src=".//images/section-2/danger.svg" alt="" />
+              <img src=".//images/section-2/danger.svg" alt="" />
+              <img src=".//images/section-2/danger.svg" alt="" />
+              <img src=".//images/section-2/danger.svg" alt="" />
+              <img src=".//images/section-2/danger.svg" alt="" />
+              <img src=".//images/section-2/danger.svg" alt="" />
+              <img src=".//images/section-2/danger.svg" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <!-- СЕКЦИЯ 3 -->
+        <section class="section-3">
+          <div class="block-1">
+            <h1 class="heading-1">
+              ВЫБЕРИ МЕСТО ДЛЯ ВЫСАДКИ<br />ГИГАНТСКОЙ ЛИЛИИ
+            </h1>
+          </div>
+          <div class="map">
+            <!-- карта -->
+            <img src=".//images/section-3/map.svg" alt="" />
+            <!-- пункты -->
+            <img src=".//images/section-3/point.svg" alt="" />
+            <img src=".//images/section-3/point.svg" alt="" />
+            <img src=".//images/section-3/point.svg" alt="" />
+            <img src=".//images/section-3/point.svg" alt="" />
+            <img src=".//images/section-3/point.svg" alt="" />
+            <img src=".//images/section-3/point.svg" alt="" />
+            <img src=".//images/section-3/point.svg" alt="" />
+          </div>
+        </section>
+      </main>
+
+      <!-- БОКОВОЕ МЕНЮ -->
+      <aside class="sidebar">
+        <!-- Инструменты -->
+        <div class="sidebar-block">ИНСТРУМЕНТЫ</div>
+        <div class="instruments">
+          <div class="pencil">
+            <img
+              class="pencil-img"
+              src=".//images/section-1/pencil.svg"
+              alt=""
+            />
+            <div>КАРАНДАШ</div>
+          </div>
+          <div class="comparison">
+            <img
+              class="comparison-img"
+              src=".//images/section-1/men.svg"
+              alt=""
+            />
+            СРАВНЕНИЕ
+          </div>
+          <div class="glass">
+            <img
+              class="glass-img"
+              src=".//images/section-1/line.svg
+            "
+              alt=""
+            />ЛУПА
+          </div>
+          <div class="scan">
+            <img
+              class="scan-img"
+              src=".//images/section-1/scanner.svg"
+              alt=""
+            />СКАНЕР
+          </div>
+        </div>
+
+        <!-- Задачи -->
+        <div class="sidebar-block">ЗАДАЧИ</div>
+        <div class="tasks">
+          <label>
+            <input type="checkbox" class="task-check" /> Измерить стрекозу
+          </label>
+          <label>
+            <input type="checkbox" class="task-check" /> Выявить мутацию
+            растения
+          </label>
+          <label>
+            <input type="checkbox" class="task-check" /> Выбрать место <br />
+            для высадки гигантской лилии
+          </label>
+        </div>
+        <div class="sidebar-block">
+          ПРОГРЕСС<br />
+          ИССЛЕДОВАНИЯ
+          <section class="progressBarSection">
+            <div class="progressBar">
+              <div class="progressBarLine"></div>
+              <p class="progressBarNumber">0%</p>
+            </div>
+          </section>
+        </div>
+      </aside>
+    </div>
+
+    <!--ФУТЕР -->
+    <footer>СТУДЕНТ: НАПРЮШКИНА ВИКТОРИЯ<br />КУРАТОР: РИХТЕР КАМИЛА</footer>
+  </body>
 </html>
