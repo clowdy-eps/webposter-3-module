@@ -1,5 +1,4 @@
 /* 768x1024 (Планшет - Portrait XGA)     */
-
 @media (max-width: 768px) {
   html,
   body {
@@ -7,20 +6,75 @@
     max-width: 100%;
   }
 
-  /*ШАПКА*/
-  header {
-    padding: 3vw 5vw;
-    gap: 4%;
-  }
-  .header-link {
-    font-size: 20px;
-    padding: 1vw 2vw;
+  body {
+    padding-bottom: 12vw;
   }
 
-  /* ГЛАВНАЯ СЕТКА */
+  header,
+  main,
+  .main-wrapper {
+    width: 100%;
+    min-width: auto;
+  }
+
+  /* Хедер */
+  header {
+    padding: 3vw 5vw;
+  }
+  header p {
+    font-size: 3.5vw;
+  }
+  .header-link {
+    display: none;
+  }
+
+  .tasks,
+  .sidebar-block:nth-of-type(1),
+  .sidebar-block:nth-of-type(2),
+  .sidebar-block:nth-of-type(3),
+  .sidebar-block:nth-of-type(4),
+  .sidebar-block:nth-of-type(5) {
+    display: none;
+  }
+
+  .instruments {
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    z-index: 10;
+  }
+  .pencil,
+  .comparison,
+  .glass,
+  .scan {
+    width: 25%;
+    border-top: none;
+    border-right: 1px solid #000;
+    padding: 2vw;
+    font-size: 2vw;
+  }
+  .scan,
+  .pencil {
+    border-right: none;
+  }
+  .pencil-img,
+  .comparison-img,
+  .glass-img,
+  .scan-img {
+    height: 5vw;
+    width: auto;
+  }
+
+  /* Главная обертка */
   .main-wrapper {
     flex-direction: column;
-    padding-top: 15vw;
+    padding-top: 12vw;
   }
 
   .section-1,
@@ -31,15 +85,15 @@
     border-right: none;
   }
 
-  /* СЕКЦИЯ 1 */
+  /* Заголовки */
   h1 {
-    font-size: 46px;
+    font-size: 6vw;
   }
-
   .heading {
-    padding: 8vw 5vw 3vw 5vw;
+    padding: 6vw 5vw 3vw 5vw;
   }
 
+  /* СЕКЦИЯ 1 */
   .wrapper-2 {
     display: flex;
     flex-direction: column;
@@ -47,108 +101,223 @@
   .wrapper-1 {
     display: contents;
   }
-
   .coordinates {
     display: none;
   }
+
   .dragonfly {
     order: 2;
     width: 100%;
-    height: 65vw;
+    height: 70vw;
+    margin-left: 0;
     border-top: 1px solid #000;
-    position: relative;
-    overflow: hidden;
   }
-  .growth {
-    order: 3;
-    width: 100%;
-    padding: 3vw 5vw;
-    border-right: none;
+  .dragonfly-img {
+    width: 73%;
+    height: auto;
+    top: 10%;
+    left: 10%;
+    padding: 0;
   }
-  .sprite-graphics {
-    order: 4;
-    width: 100%;
-    padding: 3vw 5vw;
-    border-right: none;
-    background-size: cover;
-  }
-
   .dragonfly img:nth-of-type(2) {
     margin: 0;
-    top: 12%;
-    left: 30%;
-    width: 50%;
+    top: 15%;
+    left: 25%;
+    width: 25%;
   }
   .dragonfly img:nth-of-type(3) {
     margin: 0;
     top: 60%;
-    left: 15%;
+    left: 10%;
     width: 25%;
   }
   .dragonfly img:nth-of-type(4) {
     margin: 0;
     top: 35%;
-    left: 60%;
+    left: 65%;
     width: 25%;
   }
-
+  #txt-1,
+  #txt-2,
+  #txt-3,
+  #txt-4,
+  #txt-5 {
+    font-size: 3vw;
+  }
   #txt-1 {
     margin: 0;
-    top: 5%;
+    top: 8%;
     left: 25%;
-    font-size: 20px;
   }
   #txt-2 {
     margin: 0;
     top: 55%;
-    left: 5%;
-    font-size: 20px;
+    left: 10%;
   }
   #txt-3 {
     margin: 0;
     top: 25%;
-    left: 70%;
-    font-size: 20px;
+    left: 65%;
   }
   #txt-4 {
     margin: 0;
-    bottom: 5%;
-    left: 5%;
-    font-size: 20px;
+    bottom: 8%;
+    left: 10%;
   }
   #txt-5 {
     margin: 0;
-    bottom: 5%;
-    right: 5%;
-    font-size: 20px;
+    bottom: 8%;
+    left: 55%;
   }
 
-  /* СЕКЦИИ 2 И 3 */
-  .block-2 {
+  .growth {
+    order: 3;
+    width: 100%;
+    padding: 3vw 5vw;
+    font-size: 4vw;
+    border-right: none;
+  }
+  .sprite-graphics {
+    order: 4;
+    height: 25vw;
+    width: 100%;
+    padding: 3vw 5vw;
+    background-size: cover;
+    border-right: none;
+  }
+
+  /* СЕКЦИЯ 2 */
+  .section-2 {
+    display: flex;
     flex-direction: column;
+  }
+  .section-2 .wrapper-2 {
+    order: 1;
+  }
+
+  .plant {
+    width: 70%;
+    height: auto;
+    min-height: 50vw;
+    margin: 4vw auto;
+    padding: 3vw 5vw;
+  }
+  .plant p {
+    font-size: 3.5vw;
+  }
+  .plant-img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .block-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    order: 2;
+    height: auto;
+    padding: 0 4vw;
   }
   .quantity,
   .risk {
-    width: 90%;
-    margin: 2vw auto;
-    padding: 3vw 5vw;
+    width: 48%;
+    margin: 2vw 0;
+    padding: 3vw;
     height: auto;
   }
-  .plant {
-    width: 90%;
-    min-height: 50vw;
-    margin: 3vw auto;
-    padding: 3vw 5vw;
+  .quantity p,
+  .risk p {
+    font-size: 3.5vw;
   }
+  .button-1 {
+    font-size: 3vw;
+    margin-top: 2vw;
+    padding: 1.5vw 3vw;
+  }
+  /* КОНСОЛЬ */
   .console {
     width: 90%;
-    height: 50vw;
+    height: 90vw;
     margin: 3vw auto;
+    position: relative;
   }
+  .console-name {
+    height: auto;
+    min-height: 60px;
+    padding-left: 4vw;
+  }
+  .console-name p {
+    font-size: 5vw;
+    left: 4vw;
+  }
+  .console-input {
+    top: 12vw;
+    left: 4vw;
+    font-size: 24px;
+  }
+
+  /* размер плашек */
+  .console-warnings {
+    width: 125%;
+  }
+  /* расположение плашек */
+  .console img:nth-of-type(1) {
+    top: 30%;
+    left: 10%;
+  }
+  .console img:nth-of-type(2) {
+    top: 37%;
+    left: 40%;
+  }
+  .console img:nth-of-type(3) {
+    top: 33%;
+    left: 48%;
+  }
+  .console img:nth-of-type(4) {
+    top: 45%;
+    left: 6%;
+  }
+  .console img:nth-of-type(5) {
+    top: 50%;
+    left: 44%;
+  }
+  .console img:nth-of-type(6) {
+    top: 70%;
+    left: 32%;
+  }
+  .console img:nth-of-type(7) {
+    top: 80%;
+    left: 10%;
+  }
+  .console img:nth-of-type(8) {
+    top: 75%;
+    left: 24%;
+  }
+  .console img:nth-of-type(9) {
+    top: 85%;
+    left: 30%;
+  }
+
+  /* СЕКЦИЯ 3 */
   .map {
-    width: 90%;
-    height: 60vw;
-    margin: 3vw auto;
+    width: 85%;
+    margin: 4vw auto;
+    height: auto;
+    padding: 4vw;
+  }
+  .map img:nth-of-type(1) {
+    width: 100%;
+    height: auto;
+  }
+  .point {
+    width: 5vw;
+  }
+
+  footer {
+    font-size: 2.5vw;
+    padding: 4vw 5vw;
   }
 }
 
@@ -484,5 +653,197 @@
   footer {
     padding-left: 30px;
     font-size: 18px;
+  }
+}
+
+/* Для широких экранов */
+
+@media (min-width: 1081px) {
+  body {
+    margin: 0 auto;
+    max-width: 1080px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    position: relative;
+  }
+
+  header {
+    width: 1080px;
+    min-width: 1080px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 34px 35px 20px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+
+  header p,
+  .header-link {
+    font-size: 21px;
+  }
+  .header-link {
+    padding: 0 32px;
+  }
+
+  .main-wrapper {
+    width: 1080px;
+    min-width: 1080px;
+    padding-top: 128px;
+  }
+
+  /* БОКОВОЕ МЕНЮ И ЕГО ГРАНИЦЫ */
+  .sidebar {
+    width: 270px;
+    top: 128px;
+    max-height: calc(100vh - 128px);
+    border-right: 1px solid #000;
+  }
+
+  /* .sidebar-block,
+  .tasks {
+    border-right: 1px solid #000;
+  } */
+
+  .sidebar-block,
+  .tasks {
+    font-size: 22px;
+    padding: 14px 22px;
+  }
+  .instruments {
+    width: 270px;
+  }
+  .pencil-img,
+  .comparison-img,
+  .glass-img,
+  .scan-img {
+    height: 47px;
+    width: 86px;
+  }
+
+  .pencil,
+  .comparison,
+  .glass,
+  .scan {
+    padding: 14px 22px;
+    gap: 7px;
+  }
+  .progressBar {
+    width: 225px;
+    height: 43px;
+    margin-top: 11px;
+  }
+  .progressBarNumber {
+    font-size: 17px;
+    top: 13px;
+    right: 22px;
+  }
+
+  .section-1,
+  .section-2,
+  .section-3 {
+    width: 810px;
+  }
+  h1 {
+    font-size: 54px;
+  }
+  .heading {
+    padding: 74px 0 0 35px;
+    margin-bottom: 27px;
+  }
+
+  .coordinates,
+  .growth {
+    width: 216px;
+    padding: 17px 0 17px 35px;
+    font-size: 22px;
+  }
+  .sprite-graphics {
+    width: 216px;
+    height: 155px;
+  }
+  .dragonfly {
+    height: 432px;
+  }
+  .dragonfly-img {
+    height: 434px;
+    width: 518px;
+    padding: 47px 0 22px;
+  }
+  #txt-1,
+  #txt-2,
+  #txt-3 {
+    font-size: 18px;
+  }
+  #txt-4,
+  #txt-5 {
+    font-size: 23px;
+    margin-top: 391px;
+  }
+  #txt-4 {
+    margin-left: 43px;
+  }
+  #txt-5 {
+    margin-left: 367px;
+  }
+
+  .block-2 {
+    height: 130px;
+  }
+  .quantity,
+  .risk {
+    height: 108px;
+    margin: 14px 27px 22px 35px;
+    padding: 11px 11px 22px 22px;
+  }
+  .quantity p,
+  .risk p {
+    font-size: 26px;
+  }
+  .button-1 {
+    padding: 7px 22px;
+    margin-top: 22px;
+    font-size: 18px;
+  }
+
+  .plant {
+    width: 291px;
+    height: 391px;
+    margin-left: 35px;
+    padding: 14px 22px;
+  }
+  .plant p {
+    font-size: 23px;
+  }
+  .console {
+    width: 432px;
+    height: 302px;
+    margin-left: 22px;
+  }
+  .console-name {
+    height: 43px;
+    padding-left: 22px;
+  }
+  .console-name p {
+    font-size: 24px;
+  }
+  .console-input {
+    top: 54px;
+    left: 22px;
+    font-size: 18px;
+  }
+
+  .map {
+    width: 658px;
+    height: 486px;
+    margin-left: 35px;
+    padding: 32px;
+  }
+  .point {
+    width: 43px;
+  }
+
+  footer {
+    font-size: 22px;
+    padding: 37px 35px;
   }
 }

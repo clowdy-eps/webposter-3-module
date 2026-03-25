@@ -117,9 +117,9 @@ html {
 }
 
 .instruments {
-  display: flex;
-  flex-wrap: wrap;
-  width: 25vw;
+  display: grid;
+  grid-template-columns: 50% 50%; /* Жестко рубим пространство на 2 равные колонки */
+  width: 100%; /* Растягиваем на всю ширину бокового меню */
   background-color: #fff;
 }
 
@@ -415,7 +415,7 @@ html {
   font-size: 2.2vw;
 }
 
-/* Стилизация инпута */
+/* Инпут */
 .console-input {
   position: absolute;
   top: 5vw;
@@ -426,27 +426,28 @@ html {
   color: #fff;
   font-size: 1.7vw;
   width: 80%;
+  height: 6vw;
+  pointer-events: auto;
 }
 
 .console-input::placeholder {
   color: #c3c3c3;
 }
 
-/* ШАГ 5: Подготовка к JS-анимации */
 .console-warnings {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0; /* Скрываем по умолчанию */
-  pointer-events: none; /* Отключаем клики, пока элемент скрыт */
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 
-/* Этот класс ты будешь вешать через JS (.classList.add('active')) */
 .console-warnings.active {
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 /* Базовые стили для изображений внутри обертки */
@@ -457,7 +458,6 @@ html {
   margin: 0;
 }
 
-/* ШАГ 3: Позиционирование 7 плашек для десктопа (по эталону №3) */
 .console-warnings img:nth-of-type(1) {
   top: 25%;
   left: 55%;
@@ -486,65 +486,6 @@ html {
   top: 80%;
   left: 10%;
 }
-
-/* .console {
-  position: relative;
-  margin-left: 2vw;
-  background-color: #2a2a2a;
-  width: 40vw;
-  height: 26.25vw;
-}
-
-.console-name {
-  position: absolute;
-  background-color: #5d5d5d;
-  width: 40vw;
-  height: 3.2vw;
-  z-index: 1;
-}
-.console-name p {
-  position: relative;
-  color: #fff;
-  margin: 0.8vw;
-  font-size: 28px;
-}
-
-.console img:nth-of-type(1) {
-  position: absolute;
-  margin: 4.375vw 10vw;
-}
-.console img:nth-of-type(2) {
-  position: absolute;
-  margin: 5vw 8vw;
-}
-.console img:nth-of-type(3) {
-  position: absolute;
-  margin: 5vw 20vw;
-}
-.console img:nth-of-type(4) {
-  position: absolute;
-  margin: 6.25vw 2vw;
-}
-.console img:nth-of-type(5) {
-  position: absolute;
-  margin: 17.5vw 5vw;
-}
-.console img:nth-of-type(6) {
-  position: absolute;
-  margin: 14.375vw 19vw;
-}
-.console img:nth-of-type(7) {
-  position: absolute;
-  margin: 11.875vw 3vw;
-}
-.console img:nth-of-type(8) {
-  position: absolute;
-  margin: 10vw 9vw;
-}
-.console img:nth-of-type(9) {
-  position: absolute;
-  margin: 18.125vw 6vw;
-} */
 
 /* СЕКЦИЯ 3 */
 
